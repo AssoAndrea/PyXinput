@@ -106,7 +106,7 @@ def pyX_input_enable(enable):
     xinput_lib.XInputEnable(enable)
     return
 
-# TODO: XInputGetAudioDeviceIds ha un _Out_writes_opt_, capire come portarlo su python
+# TODO: XInputGetAudioDeviceIds _Out_writes_opt_ test if work
 xinput_lib.XInputGetAudioDeviceIds.argtypes = [DWORD, POINTER(LPWSTR),POINTER(UINT),POINTER(LPWSTR),POINTER(UINT)]
 xinput_lib.XInputGetAudioDeviceIds.restype = DWORD
 
