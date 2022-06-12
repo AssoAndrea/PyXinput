@@ -7,7 +7,6 @@ import pytest
 
 def setup_module():
     pytest.lib = pyX.load_DLL(is_test=True)
-    pytest.num = 10
     if not pytest.lib:
         raise IOError("lib not found")
 
