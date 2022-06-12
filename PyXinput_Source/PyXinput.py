@@ -42,7 +42,6 @@ def load_DLL(is_test=False):
 
     xinput_lib.XInputEnable.argtypes = [BOOL]
 
-    # TODO: XInputGetAudioDeviceIds _Out_writes_opt_ test if work
     xinput_lib.XInputGetAudioDeviceIds.argtypes = [DWORD, LPWSTR, POINTER(UINT), LPWSTR,
                                                    POINTER(UINT)]
     xinput_lib.XInputGetAudioDeviceIds.restype = DWORD
