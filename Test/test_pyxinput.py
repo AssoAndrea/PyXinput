@@ -58,9 +58,9 @@ def test_input_enable():
     assert ret_val == False
 
 def test_get_audio_devide_ids():
-    render_device_id = ctypes.c_wchar('v')
+    render_device_id = pyX.WCHAR('v')
     render_count = pyX.UINT(0)
-    capture_device_id =  ctypes.c_wchar('v')
+    capture_device_id =  pyX.WCHAR('v')
     capture_count = pyX.UINT(0)
     ret_val = pyX.pyX_get_audio_device_ids(5,render_device_id,render_count,capture_device_id,capture_count)
     assert ret_val == 5

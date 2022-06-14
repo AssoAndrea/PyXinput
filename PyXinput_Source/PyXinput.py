@@ -182,9 +182,11 @@ def pyX_input_enable(enable):
 
 
 
-def pyX_get_audio_device_ids(dwUserIndex,pRenderDeviceId = None,pRenderCount = None,pCaptureDeviceId = None,pCaptureCount = None):
-    return xinput_lib.XInputGetAudioDeviceIds(dwUserIndex,ctypes.byref(pRenderDeviceId),ctypes.byref(pRenderCount),ctypes.byref(pCaptureDeviceId),ctypes.byref(pCaptureCount))
+def pyX_get_audio_device_ids(dwUserIndex,pRenderDeviceId,pRenderCount,pCaptureDeviceId,pCaptureCount):
 
+    ret_val = xinput_lib.XInputGetAudioDeviceIds(dwUserIndex,ctypes.byref(pRenderDeviceId),ctypes.byref(pRenderCount),ctypes.byref(pCaptureDeviceId),ctypes.byref(pCaptureCount))
+    pRenderDeviceId = pRenderDeviceId.value
+    return  ret_val
 
 
 def pyX_get_battery_info(dwUserIndex, devType, batteryInformation):
