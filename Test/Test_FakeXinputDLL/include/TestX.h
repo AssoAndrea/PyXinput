@@ -188,9 +188,6 @@ typedef struct _XINPUT_KEYSTROKE
 
 extern "C" {
 	
-    int FAKEXINPUT_API Prova(int c);
-
-
     DWORD FAKEXINPUT_API XInputGetState
     (
         _In_  DWORD         dwUserIndex,  // Index of the gamer associated with the device

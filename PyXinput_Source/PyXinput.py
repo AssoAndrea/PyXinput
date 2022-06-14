@@ -182,7 +182,7 @@ def pyX_input_enable(enable):
 
 
 
-def pyX_get_Audio_Device_Ids(dwUserIndex,pRenderDeviceId = None,pRenderCount = None,pCaptureDeviceId = None,pCaptureCount = None):
+def pyX_get_audio_device_ids(dwUserIndex,pRenderDeviceId = None,pRenderCount = None,pCaptureDeviceId = None,pCaptureCount = None):
     return xinput_lib.XInputGetAudioDeviceIds(dwUserIndex,ctypes.byref(pRenderDeviceId),ctypes.byref(pRenderCount),ctypes.byref(pCaptureDeviceId),ctypes.byref(pCaptureCount))
 
 

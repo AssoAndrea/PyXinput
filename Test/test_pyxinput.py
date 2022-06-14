@@ -12,7 +12,7 @@ def setup_module():
 
 
 
-def test_GetState():
+def test_get_state():
 
     state = pyX.STATE()
     ret_val = pyX.pyX_get_state(1,state)
@@ -26,7 +26,7 @@ def test_GetState():
     assert state.Gamepad.sThumbRX == 10
     assert state.Gamepad.sThumbRY == 10
 
-def test_SetState():
+def test_set_state():
     vibration = pyX.VIBRATION(left_motor=2,right_motor=2)
     ret_val = pyX.pyX_set_state(1,vibration)
     assert ret_val == 1
@@ -62,7 +62,7 @@ def test_get_audio_devide_ids():
     render_count = pyX.UINT(0)
     capture_device_id =  ctypes.c_wchar('v')
     capture_count = pyX.UINT(0)
-    ret_val = pyX.pyX_get_Audio_Device_Ids(5,render_device_id,render_count,capture_device_id,capture_count)
+    ret_val = pyX.pyX_get_audio_device_ids(5,render_device_id,render_count,capture_device_id,capture_count)
     assert ret_val == 5
     assert render_count.value == 10
     assert capture_count.value == 10

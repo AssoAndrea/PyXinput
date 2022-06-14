@@ -5,12 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int Prova(int c)
-{
-	printf("PROVA");
-	return c;
-}
-
 DWORD XInputGetState(_In_ DWORD dwUserIndex, _Out_ XINPUT_STATE* pState)
 {
 	pState->dwPacketNumber = 10;
